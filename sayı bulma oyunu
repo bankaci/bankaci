@@ -1,0 +1,25 @@
+let kullaniciTahmini = null;
+let denemeSayisi = 0;
+
+function sayiTahminOyunu () {
+
+  const bilgisayarSayisi  = Math.floor(Math.random() * 100) + 1;
+     console.log(bilgisayarSayisi)
+;  
+  while(true) {
+    kullaniciTahmini = Number(prompt("bir sayı giriniz 1 ile 100 arasında olsun"));
+    if (isNaN(kullaniciTahmini)) { alert("gecerli bir sayı giriniz")
+    continue;}
+    denemeSayisi++;
+  if ( bilgisayarSayisi === kullaniciTahmini ) {
+    
+    alert("Tebrikler " + denemeSayisi + ". denemenizde bildiniz")
+      break;}
+  else if ( bilgisayarSayisi > kullaniciTahmini ) { 
+    alert( " daha büyük bir sayı giriniz");}
+  else {
+    alert("daha küçük sayı giriniz");}
+  }
+}
+
+sayiTahminOyunu()
